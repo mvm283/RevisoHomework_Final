@@ -1,0 +1,64 @@
+﻿
+<div class="panel panel-default">
+
+    <div style="padding:15px">
+        <form name="addForm">
+            <table>
+                <tr>
+                    <td>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon2" style="width:80px;height:18px">Code</span>
+                            <input ng-model="model.Code" type="text" class="form-control" required aria-describedby="sizing-addon2">
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon2" style="width:80px;height:18px">Title</span>
+                            <input ng-model="model.Title" type="text" class="form-control" aria-describedby="sizing-addon2">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon3" style="width:80px;height:18px">Phone</span>
+                            <input ng-model="model.Phone" type="text" class="form-control" aria-describedby="sizing-addon3">
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon3" style="width:80px;height:18px">Mobile</span>
+                            <input ng-model="model.Mobile" type="text" class="form-control" aria-describedby="sizing-addon3">
+                        </div>
+                    </td>
+                </tr>  
+                <tr>
+                    <td>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon3" style="width:80px;height:18px">Comment</span>
+                            <input ng-model="model.Comment" type="text" class="form-control" aria-describedby="sizing-addon3">
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon3" style="width:80px;height:18px">Address</span>
+                            <input ng-model="model.Address" type="text" class="form-control" aria-describedby="sizing-addon3">
+                        </div>  
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><button kendo-button ng-click="save()" ng-disabled="!addForm.$valid">Save</button></td>
+                    <td><button kendo-button ng-click="close()"  >Close</button></td>
+
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+ 

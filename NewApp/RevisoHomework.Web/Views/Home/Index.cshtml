@@ -1,0 +1,119 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Reviso Homework</title>
+    <link rel="stylesheet" type="text/css" href="/Content/css/960.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/css/text.css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/global.css" rel="stylesheet" /> 
+
+
+    <link href="~/Content/kendo/kendo.common.min.css" rel="stylesheet" />
+    <link href="~/Content/kendo/kendo.blueopal.min.css" rel="stylesheet" />
+    <link href="~/Content/kendo/kendo.rtl.min.css" rel="stylesheet" />
+    <link href="~/Content/css/please-wait.css" rel="stylesheet" /> 
+    <link type="text/css" href="/Content/css/smoothness/ui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Content/kendo/kendo.default.min.css" />
+    <link rel="stylesheet" href="/Content/kendo/kendo.mobile.all.min.css" />
+
+    <script src="~/Scripts/kendo/jquery.min.js"></script>
+    <script src="~/Scripts/please-wait.min.js"></script> 
+    <script src="~/Scripts/kendo/kendo.all.min.js"></script>
+    <script src="~/Scripts/kendo/angular.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/kendo/kendo.angular.min.js"></script>  
+    <script src="~/Scripts/kendo/cultures/kendo.culture.en-GB.min.js"></script>
+    <script src="~/Scripts/kendo/lang/kendo.en-GB.js"></script> 
+    <script src="~/Scripts/kendo/kendo.web.ext.js"></script>
+    <script src="~/Scripts/angular-kendo-window.js"></script>
+    <script src="~/Scripts/underscore.min.js"></script>
+
+    <script src="~/Scripts/tools.js"></script>
+    <script src="~/modules/app/app.js"></script>
+    <script src="~/modules/app/infrastructure.js"></script>
+    <script src="~/modules/app/httpService.js"></script>
+    <script src="~/modules/dashboard/dashboardControllers.js"></script>
+     
+
+    @*User RevisoHomework*@
+    <script src="~/modules/RevisoHomework/customer/customerService.js"></script>
+    <script src="~/modules/RevisoHomework/customer/customerController.js"></script>
+    <script src="~/modules/RevisoHomework/project/projectService.js"></script>
+    <script src="~/modules/RevisoHomework/project/projectController.js"></script>
+    <script src="~/modules/RevisoHomework/projectTimesheet/ProjectTimesheetService.js"></script>
+    <script src="~/modules/RevisoHomework/projectTimesheet/ProjectTimesheetController.js"></script>
+    @*End User RevisoHomework*@
+
+    
+</head>
+
+<body ng-app="mainApp" ng-controller="baseController">
+
+   
+
+    <div id="wrapper">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Reviso Homework</a>
+            
+        </div> 
+    
+        <!-- Sidebar Menu Items  -->
+        <div class="grid_8 k-content collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav ">
+                <ul nav=nav navbar-nav=navbar-nav side-nav=side-nav kendo-panel-bar=kendo-panel-bar k-options="panelBarOptions">
+
+                    <li>
+                        Projects
+                        <ul>
+
+                            <li ><a href="#/customer"  > Customer </a></li>
+                            <li><a href="#/project"> Project </a></li>
+                            <li  ><a href="#/ProjectTimesheet"  > Project Timesheet </a></li> 
+                         
+
+                        </ul>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+
+    </nav>
+
+
+        <div id="page-wrapper">
+            <div class="container-fluid"> 
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <article class="article grid_7">
+                            <!-- CONTENT START -->
+                            <div ng-view=ng-view id="content">
+
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <!-- /.row --> 
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+     
+        <!-- /#page-wrapper -->
+    </div>
+
+    <!-- /#wrapper -->
+ 
+   
+</body>
+</html>

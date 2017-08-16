@@ -1,0 +1,59 @@
+﻿
+<div class="panel panel-default">
+
+    <div style="padding:15px">
+        <form name="addForm">
+            <table>
+                <tr>
+                    <td>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon2" style="width:80px;height:18px">StartTime</span>
+                           
+                            <input kendo-date-time-picker
+                                   ng-model="model.StartTime"
+                                   style="width: 100%;" />
+
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon2" style="width:80px;height:18px">EndTime</span>
+                            <input kendo-date-time-picker
+                                   ng-model="model.EndTime"
+                                   style="width: 100%;" />
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon3" style="width:80px;height:18px">Project Tile</span> 
+                            <select kendo-drop-down-list ng-model="model.Project_Id"   style="width: 100%;"
+                                    k-data-value-field="'Id'"
+                                    k-data-text-field="'Title'"
+                                    k-option-label="'Select a Project...'"
+                                    k-data-source="projectDataSource" required></select>
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon3" style="width:80px;height:18px">Comment</span>
+                            <input ng-model="model.Comment" type="text" class="form-control" aria-describedby="sizing-addon3">
+                        </div>
+                    </td>
+                </tr>   
+            </table>
+            <table>
+                <tr>
+                    <td><button kendo-button ng-click="save()" ng-disabled="!addForm.$valid">Save</button></td>
+                    <td><button kendo-button ng-click="close()"  >Close</button></td>
+
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+ 

@@ -1,0 +1,65 @@
+﻿
+<div class="panel panel-default">
+
+    <div style="padding:15px">
+        <form name="addForm">
+            <table>
+                <tr>
+                    <td>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon2" style="width:80px;height:18px">Code</span>
+                            <input ng-model="model.Code" type="text" class="form-control" required aria-describedby="sizing-addon2">
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon2" style="width:80px;height:18px">Title</span>
+                            <input ng-model="model.Title" type="text" class="form-control" aria-describedby="sizing-addon2">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon3" style="width:80px;height:18px">Customer Title</span> 
+                            <select kendo-drop-down-list ng-model="model.Customer_Id"   style="width: 100%;"
+                                    k-data-value-field="'Id'"
+                                    k-data-text-field="'Title'"
+                                    k-option-label="'Select a Customer...'"
+                                    k-data-source="customerDataSource" required></select>
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon3" style="width:80px;height:18px">Price</span>
+                            <input ng-model="model.Price" type="text" class="form-control" aria-describedby="sizing-addon3">
+                        </div>
+                    </td>
+                </tr>  
+                <tr>
+                    <td>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon3" style="width:80px;height:18px">Comment</span>
+                            <input ng-model="model.Comment" type="text" class="form-control" aria-describedby="sizing-addon3">
+                        </div>
+
+                    </td>
+                    <td>
+                         
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><button kendo-button ng-click="save()" ng-disabled="!addForm.$valid">Save</button></td>
+                    <td><button kendo-button ng-click="close()"  >Close</button></td>
+
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+ 

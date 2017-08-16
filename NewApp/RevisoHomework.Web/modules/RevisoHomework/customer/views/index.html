@@ -1,0 +1,35 @@
+﻿
+<div  class="alert alert-info" role="alert">Customers</div> 
+    
+ 
+<a class="btn btn-primary" ng-click="addEditItem()">New Customer</a>
+<a class="btn btn-primary" ng-click="loadData()">Refrech</a>
+ 
+<br />
+<br />
+    <div kendo-grid
+         k-columns="[
+         {field:'Id', hidden: true},
+         {field:'Code'},
+         {field:'Title'}, 
+         {field:'Comment'},
+         {field:'Phone'},
+         {field:'Mobile'}, 
+         {field:'Address'}, 
+        {template: '#=getEditTemplate(Id)#', width:100 }
+     ]"
+         k-data-source="model.gridSource"
+         k-pageable='{ "refresh": true, "pageSizes": [10,20,50,100],numeric: false,input: true}'
+         k-filterable="true" k-sortable="true">
+    </div>
+
+     
+    <script>
+        function getEditTemplate(id) {
+            return "<a ng-click='addEditItem(" + id + ")'  ><span class='label label-primary'>edit</span> </a> " +
+                   "<a ng-click='deleteItem(" + id + ")'  ><span class='label label-danger'>delete</span></a>";
+
+            //"<a ng-click='addEditArticle(" + id + ")' has-permission='ModifyArticle'>Edit</a> " +
+            //    "<a ng-click='deleteArticle(" + id + ")' has-permission='DeleteArticle'>Delete</a>";
+        }
+    </script>
